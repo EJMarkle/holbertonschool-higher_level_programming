@@ -7,6 +7,7 @@ lastdig = abs(number) % 10
 
 if number < 0:
     lastdig = -lastdig
+
 if lastdig > 5:
     case = "and is greater than 5"
 elif lastdig == 0:
