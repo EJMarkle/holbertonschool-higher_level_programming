@@ -3,7 +3,9 @@
 import random
 number = random.randint(-10000, 10000)
 
-lastdig = number % 10
+absnum = abs(number)
+
+lastdig = absnum % 10
 
 if lastdig > 5:
     case = "and is greater than 5"
