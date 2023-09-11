@@ -6,4 +6,4 @@ a = 1
 b = 2
 sum = add(1, 2)
 
-print(sum)
+print(f"{a} + {b} = {sum}")
