@@ -1,0 +1,39 @@
+#!/usr/bin/python3
+
+"""
+This is a test file for the add_integer function.
+"""
+
+# Import the add_integer function
+from my_module import add_integer
+
+# Test cases
+
+# Test case 1: Adding two integers
+result = add_integer(3, 5)
+print(result)  # Expected output: 8
+
+# Test case 2: Adding an integer and a float
+result = add_integer(7, 2.5)
+print(result)  # Expected output: 9
+
+# Test case 3: Adding two floats
+result = add_integer(1.5, 2.3)
+print(result)  # Expected output: 3
+
+# Test case 4: Adding two negative integers
+result = add_integer(-4, -7)
+print(result)  # Expected output: -11
+
+# Test case 5: Invalid input - a is a string
+try:
+    result = add_integer("4", 6)
+except TypeError as e:
+    print(e)  # Expected output: "a must be an integer"
+
+# Test case 6: Invalid input - b is None
+try:
+    result = add_integer(3, None)
+except TypeError as e:
+    print(e)  # Expected output: "b must be an integer"
+
