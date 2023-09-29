@@ -2,5 +2,6 @@
 
 def pow(a, b):
     result = a ** b
-    formatted_result = "{:2f}".format(result)
-    return formatted_result
+    if isinstance(result, float) and  result.is_integer():
+        return int(result)
+    return result
