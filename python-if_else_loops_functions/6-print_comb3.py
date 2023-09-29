@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 
-for first_digit in range(10):
-    for second_digit in range(first_digit + 1, 10):
-        if first_digit < 9:
-            print("{:d}{:d}, ".format(first_digit, second_digit), end="")
-        else:
-            print("{:d}{:d}".format(first_digit, second_digit))
+for i in range(10):
+    for i2 in range(i + 1, 10):
+        if i != i2:
+            if i == 8 and i2 == 9:
+                print("{:d}{:d}".format(i, i2))
+            else:
+                print("{:d}{:d}, ".format(i, i2), end = "")
