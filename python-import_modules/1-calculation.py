@@ -5,12 +5,12 @@ from calculator_1 import add, sub, mul, div
 a = 10
 b = 5
 
-addResult = add(a, b)
-subResult = sub(a, b)
-mulResult = mul(a, b)
-divResult = div(a, b)
+add_result = add(a, b)
+sub_result = sub(a, b)
+mul_result = mul(a, b)
+div_result = div(a, b)
 
-print("{:d} + {:d} = {:d}".format(a, b, addResult))
-print("{:d} - {:d} = {:d}".format(a, b, subResult))
-print("{:d} * {:d} = {:d}".format(a, b, mulResult))
-print("{:d} / {:d} = {:d}".format(a, b, divResult))
+print("{:d} + {:d} = {:d}".format(a, b, add_result))
+print("{:d} - {:d} = {:d}".format(a, b, sub_result))
+print("{:d} * {:d} = {:d}".format(a, b, mul_result))
+print("{:d} / {:d} = {:d}".format(a, b, div_result))
