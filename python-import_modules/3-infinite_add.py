@@ -9,3 +9,6 @@ def main():
     for arg in args:
         result += int(arg)
     print(result)
+
+if __name__ == "__main__":
+    main()
