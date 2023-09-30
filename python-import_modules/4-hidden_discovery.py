@@ -1,4 +1,4 @@
-#!/usr/bin/Python3
+#!/usr/bin/python3
 
 import dis
 import hidden_4
