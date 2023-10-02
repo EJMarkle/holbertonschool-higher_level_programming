@@ -1,6 +1,6 @@
-#!/usr/bin/Python3
-""" 
-    Divides the elements of a matrix.
+#!/usr/bin/python3
+"""
+Divides the elements of a matrix.
 """
 
 def matrix_divided(matrix, div):
@@ -13,7 +13,7 @@ def matrix_divided(matrix, div):
         TypeError: if matrix is not list of ints or floats
         ZeroDivisionError: if div = 0
 
-    Returns: 
+    Returns:
         new divided matrix rounded to 2 decimal places
     """
 
@@ -29,7 +29,7 @@ def matrix_divided(matrix, div):
     divided_matrix = []
 
     for row in matrix:
-            new_row = [round(elem / div, 2) for elem in row]
-            divided_matrix.append(new_row)
+        new_row = [round(elem / div, 2) for elem in row]
+        divided_matrix.append(new_row)
 
     return divided_matrix
