@@ -3,7 +3,6 @@
 Divides the elements of a matrix.
 """
 
-a = "matrix must be a matrix (list of lists) of integers/floats"
 
 def matrix_divided(matrix, div):
     """
@@ -19,8 +18,10 @@ def matrix_divided(matrix, div):
         new divided matrix rounded to 2 decimal places
     """
 
+    a = "matrix must be a matrix (list of lists) of integers/floats"
+
     if (not isinstance(matrix, list) or
-        not all(isinstance(row, list) for row in matrix):
+        not all(isinstance(row, list) for row in matrix)):
         raise TypeError(a)
     if not all(len(row) == len(matrix[0]) for row in matrix):
         raise TypeError("Each row of the matrix must have the same size")
