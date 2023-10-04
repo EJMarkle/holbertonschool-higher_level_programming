@@ -32,3 +32,10 @@ class Base:
                 json_list.append(obj.to_dictionary())
         with open(filename, 'w') as file:
             file.write(cls.to_json_string(json_list))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """ returns the dictionaries from json string """
+        if not json_string:
+            return []
+        return json.loads(json_string)
