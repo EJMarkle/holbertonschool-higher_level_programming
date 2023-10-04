@@ -98,3 +98,16 @@ class Rectangle(Base):
                 'x': self.x,
                 'y': self.y
         }
+
+    @classmethod
+    def load_from_file(cls):
+        try:
+            with open(cls.__name__ + ".json", 'r') as file:
+                data = file.read()
+                if not data:
+                    return []
+                json_list = cls.from_json_string(data)
+                instances = [cls.create(**d) for d in json_list]
+                return instances
+        except FileNotFoundError:
+            return []
