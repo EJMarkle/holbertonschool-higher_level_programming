@@ -1,46 +1,27 @@
->>>Append integers to the list and print sorted
-my_list = MyList()
-my_list.append(1)
-my_list.append(4)
-my_list.append(2)
-my_list.append(3)
-my_list.append(5)
-print(my_list)  # Expected: [1, 4, 2, 3, 5]
-my_list.print_sorted()  # Expected: [1, 2, 3, 4, 5]
-print(my_list)  # Expected: [1, 4, 2, 3, 5]
+Class that inherits from list:
 
->>> Append integers in reverse order and print sorted
-my_list = MyList()
-my_list.append(5)
-my_list.append(3)
-my_list.append(2)
-my_list.append(4)
-my_list.append(1)
-print(my_list)  # Expected: [5, 3, 2, 4, 1]
-my_list.print_sorted()  # Expected: [1, 2, 3, 4, 5]
-print(my_list)  # Expected: [5, 3, 2, 4, 1]
+Function that prints sorted list
+'print_sorted()'
 
->>> Append a single integer and print sorted
-my_list = MyList()
-my_list.append(42)
-print(my_list)  # Expected: [42]
-my_list.print_sorted()  # Expected: [42]
-print(my_list)  # Expected: [42]
+MyList = __import__('1-my_list').MyList
 
->>> Append no integers and print sorted
-my_list = MyList()
-print(my_list)  # Expected: []
-my_list.print_sorted()  # Expected: []
-print(my_list)  # Expected: []
+Negative Integers:
 
->>> Append negative integers and print sorted
-my_list = MyList()
-my_list.append(-5)
-my_list.append(-1)
-my_list.append(-3)
-my_list.append(-2)
-my_list.append(-4)
-print(my_list)  # Expected: [-5, -1, -3, -2, -4]
-my_list.print_sorted()  # Expected: [-5, -4, -3, -2, -1]
-print(my_list)  # Expected: [-5, -1, -3, -2, -4]
+   >>> my_list_negative = MyList([-4, -2, -6, -1, -8, -3])
 
+Large List:
+
+    >>>large_list = MyList(range(10**6, 0, -1))
+
+Mixed Data Types:
+
+    >>> my_list_mixed = MyList([4, 2, 'abc', 1, 8, 3])
+
+Duplicate Elements:
+
+    >>> my_list_duplicates = MyList([4, 2, 2, 1, 4, 3])
+
+Single Elements:
+
+    >>> my_list_empty = MyList([])
+    >>> my_list_single = Mylist([42])
