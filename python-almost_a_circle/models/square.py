@@ -16,6 +16,19 @@ class Square(Rectangle):
                 self.id, self.x, self.y, self.width)
 
 
+@property
+def size(self):
+    """ gets square size """
+    return self.width
+
+
+@size.setter
+def size(self, value):
+    """ sets the size of the square """
+    self.width = value
+    self.height = value
+
+
 if __name__ == "__main__":
     s1 = Square(5)
     print(s1)
