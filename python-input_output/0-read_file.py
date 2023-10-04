@@ -4,10 +4,6 @@
 
 def read_file(filename=""):
     """ prints the contents of a given file """
-    try:
-        file = open(filename, "r", encoding="utf-8")
-        for line in file:
-            print(line, end="")
-        file.close()
-    except FileNotFoundError:
-        pass
+    if filename != "":
+        with open(filename, encoding="utf-8") as cur_file:
+            print(cur_file.read(), end="")
