@@ -1,1 +1,2 @@
-SELECT name FROM sys.
+-- dislpay all databases in your MySQL server
+SHOW DATABASES;
