@@ -25,4 +25,3 @@ if __name__ == "__main__":
     """ Close connections """
     cursor.close()
     db.close()
-    \n
