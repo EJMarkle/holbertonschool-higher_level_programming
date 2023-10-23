@@ -16,7 +16,7 @@ if __name__ == "__main__":
     cursor = db.cursor()
 
     """ SQL Query """
-    cursor.execute("SELECT * FROM states ORDER BY id ASC")
+    cursor.execute("SELECT * FROM states")
     states = cursor.fetchall()
 
     """ Display retrieved states """
