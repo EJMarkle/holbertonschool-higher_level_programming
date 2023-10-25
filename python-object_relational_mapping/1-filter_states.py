@@ -5,27 +5,20 @@ import MySQLdb
 import sys
 
 
-def filter_states():
-    """Filters states from database"""
+if __name__ == "__main__":
 
     username = sys.argv[1]
     password = sys.argv[2]
     database = sys.argv[3]
 
-    db = MySQLdb.connect(host='localhost',
-                        port=3306,
-                        user=username,
-                        passwd=password,
-                        db=database)
-    database_cursor = db.cursor()
-    database_cursor.execute("SELECT * FROM states WHERE name LIKE BINARY 'N%' ORDER BY id ASC")
+    db = MySQLdb.connect(host="localhost", port=3306, user=username,
+                         passwd=password, db=database)
+    cursor = db.cursor()
 
-    rows = database_cursor.fetchall()
-    for row in rows:
+    cursor.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC")
+    results = cursor.fetchall()
+
+    for row in results:
         print(row)
-    database_cursor.close()
+
     db.close()
-
-
-if __name__ == "__main__":
-    filter_states()
